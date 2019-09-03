@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>路由学习</title>
+	<link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+</head>
+<body>
+	<div id="app">
+	<router-link to="/account">account</router-link>
+	<router-view></router-view>
+	</div>
+</body>
+<script type="text/javascript" src="/node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="/node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+	const login = {
+  	template: '<div>login</div>',
+  	created(){
+  		console.log(this.$route);
+  	}
+	}	
+	const register = {
+  	template: '<div>register</div>'
+	}	
+	const HOME = {
+  	template: `<div>HOME
+  			<router-link to="/account/login">deng</router-link>
+		<router-link to="/account/register">register</router-link>
+		<router-view></router-view></div>`
+	}
+	const router = new VueRouter({
+  	routes: [
+	{
+  	path:"/account",
+  	component:HOME,
+  	children: [
+        {
+          // 当 /user/:id/profile 匹配成功，
+          // UserProfile 会被渲染在 User 的 <router-view> 中
+          path: 'login',
+          component: login
+        },
+        {
+          // 当 /user/:id/posts 匹配成功
+          // UserPosts 会被渲染在 User 的 <router-view> 中
+          path: 'register',
+          component: register
+        }
+      ]}
+      ]
+	})
+	var app=new Vue({
+		el:"#app",
+		data:{
+			a:"aaa"
+		},
+		router:router
+	})
+</script>
+</html>

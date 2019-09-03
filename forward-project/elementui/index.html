@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Element UI</title>
+	<link rel="stylesheet" type="text/css" href="/node_modules/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+	<div class="block">
+  <span class="demonstration">默认不区分颜色</span>
+  <el-rate v-model="value1"></el-rate>
+</div>
+<div class="block">
+  <span class="demonstration"  @click="handleclick">区分颜色</span>
+  <el-rate
+    v-model="value2"
+    :colors="colors"
+   >
+  </el-rate>
+</div>
+</div>
+
+</body>
+	<script type="text/javascript" src="/node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="/node_modules/element-ui/lib/index.js"></script>	
+<script>
+	var app=new Vue({
+		el:"#app",
+		data:{
+		value1: null,
+        value2: null,
+        colors: ['#99A9BF', '#F7BA2A', '#FF9900']},
+        methods:{
+        	handleclick(){
+        		alert(this.value2)
+
+        	}
+        }
+	})
+</script>
+</html>

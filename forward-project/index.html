@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="header">
+		头部
+		
+	</div>
+	<div class="asideer">
+		<ul>
+			<li><a href="/#/find">发现音乐</a></li>
+			<li><a href="/#/my">我的音乐</a></li>
+			<li><a href="/#/frind">朋友</a></li>	
+		</ul>
+	</div>
+	<div id="container"><!-- 渲染容器 --></div>
+<!-- 	<script id="tpl" type="text/template">
+	{{ each todos }}
+	<li>{{$value.title}}</li>
+	{{/each}}
+</script>	 -->
+</body>
+<script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/node_modules/art-template/lib/template-web.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script>
+$(document).ready(function(){
+	$.get('/API/',function(data){
+		console.log(data);
+		var htmlStr=template('tpl',{
+			todos:data
+		})
+		$("#container").html(htmlStr)
+	})
+})
+</script> -->
+<script>
+	$(document).ready(function(){
+		console.log(window.location.hash.substr(1));
+		route()
+	})
+	window.onhashchange=function(){
+		route()
+	}
+	var route=function(){
+		/*console.log(this.location.hash.substr(1)) *///从第二个字符串开始走，拿到路由
+		var hash=window.location.hash.substr(1);
+		if(hash === "/my"){
+			$("#container").html("my")
+		}else if(hash === "/frind"){
+			$("#container").html("friend")
+		}else if(hash === "/find"){
+			console.log("find")
+			$.get("find-music.html",function(data){
+				$("#container").html(data) //得到find-music.html文件字符串
+			})
+		}else{
+			$.get('/API',function(data){
+			$('#container').html(data[0].id) 
+			console.log(data)
+		})			
+		}
+	}
+</script>
+
+</html>

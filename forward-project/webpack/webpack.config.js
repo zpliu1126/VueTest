@@ -10,7 +10,7 @@ module.exports={
 		filename:"bundle.js"
 	},
 	devServer:{
-		port:8081,
+		port:80,
 		host:'0.0.0.0',
 		disableHostCheck: true,
 		contentBase:path.join(__dirname,"/"),
@@ -25,7 +25,7 @@ module.exports={
 				{loader:'css-loader'}
 				]
 			},
-			{test:/\.(jpg|png|gif|jpeg)$/,use: 'url-loader?limit=102400&name=[name].[ext]'},
+			{test:/\.(ttf|woff|woff2|jpg|png|gif|jpeg)$/,use: 'url-loader?limit=102400&name=[name].[ext]'},
 			{test:/\.vue$/,use:'vue-loader'},
 			{test:/\.js$/,use:'babel-loader'}
 		]

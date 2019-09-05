@@ -5,7 +5,7 @@
 	<!-- 底部内容 -->
 	<mt-tabbar v-model="selected" >
 	  <mt-tab-item  :id="item.content" v-for="item in data1" :key="item.id" :href="item.link">
-	    <img slot="icon" >
+	    <span slot="icon" class="mui-icon" :class="item.icon"></span>
 	    {{item.content}}
 	  </mt-tab-item>
 	</mt-tabbar>
@@ -19,19 +19,23 @@
 				data1:[{
 					id:0,
 					content:"Home",
-					link:"/#/login"
+					link:"/#/home",
+					icon:"mui-icon-home"
 				},{
 					id:1,
 					content:"订单",
-					link:"/#/login"
+					link:"/#/buy",
+					icon:"mui-icon-email"
 				},{
 					id:2,
 					content:"发现",
-					link:"/login"
+					link:"/#find",
+					icon:"mui-icon-chatbubble"
 				},{
 					id:3,
 					content:"我的",
-					link:"/login"
+					link:"/#my",
+					icon:"mui-icon-location"
 				}
 				],
 				selected:''
@@ -43,5 +47,11 @@
 	}	
 </script>
 <style scoped>
+.app-container{
+	padding-bottom: 50px;
 
+}
+.mint-tabbar{
+	position: fixed;
+}
 </style>

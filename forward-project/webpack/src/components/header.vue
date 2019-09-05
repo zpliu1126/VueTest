@@ -1,6 +1,6 @@
 <template>
 	<!-- 顶部内容 mint-ui组件 -->
-	<mt-header fixed :title="header"></mt-header> 
+	<mt-header  :title="header"></mt-header> 
 </template>
 <script>
 export default {

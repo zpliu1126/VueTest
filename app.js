@@ -34,7 +34,8 @@ app.use(function(err,req,rep,next){
 
 //404 中间件
 app.use(function(req,rep){
-	rep.render("404.html")
+	rep.header("Access-Control-Allow-Origin", "*");
+	rep.status(404).render("404.html") //不存在的页面一定要发404状态
 })
 
 app.listen(8080,function(){

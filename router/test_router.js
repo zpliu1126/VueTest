@@ -9,12 +9,16 @@ const todos=[
 	},
 	{
 		'id':2,
-		'title':"吃饭2"
-	},
+		'title':"睡觉"
+	},{
+		'id':3,
+		'title':"打豆豆"
+	}
 ]
 router
 	.get("/API",(req,rep,next)=>{
-		rep.json(todos)
+		rep.header("Access-Control-Allow-Origin", "*"); //处理跨域请求
+		rep.status(200).json(todos)
 	}) //数据接口
 	.post("/API",(req,rep,next)=>{
 		var todo={

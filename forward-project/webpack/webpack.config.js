@@ -25,6 +25,11 @@ module.exports={
 				{loader:'css-loader'}
 				]
 			},
+			{test:/\.scss$/,use:[
+				{loader:'style-loader'},
+				{loader:'css-loader'},
+				{loader:'sass-loader'}
+				]},
 			{test:/\.(ttf|woff|woff2|jpg|png|gif|jpeg)$/,use: 'url-loader?limit=102400&name=[name].[ext]'},
 			{test:/\.vue$/,use:'vue-loader'},
 			{test:/\.js$/,use:'babel-loader'}

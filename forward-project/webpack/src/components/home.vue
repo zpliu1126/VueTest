@@ -4,16 +4,23 @@
  -->	<mt-swipe :auto="2000">
 	  <mt-swipe-item v-for="item in datalist" :key="item.id">{{item.title}}</mt-swipe-item>
 	</mt-swipe>
+	<el-row>
+	  <el-button>默认按钮</el-button>
+	  <el-button type="primary">主要按钮</el-button>
+	  <el-button type="success">成功按钮</el-button>
+	  <el-button type="info">信息按钮</el-button>
+	  <el-button type="warning">警告按钮</el-button>
+	  <el-button type="danger">危险按钮</el-button>
+	</el-row>
 <!-- 	九宫格区域-->
-	
 <ul class="mui-table-view mui-grid-view mui-grid-9">
 	
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="home/news">
 		                    <span class="mui-icon mui-icon-home"></span>
 		                    <div class="mui-media-body">新闻资讯</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-		                    <div class="mui-media-body">Email</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#/blog">
+		                    <span class="mui-icon mui-icon-compose"><span class="mui-badge">5</span></span>
+		                    <div class="mui-media-body">Blog</div></a></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon mui-icon-chatbubble"></span>
 		                    <div class="mui-media-body">Chat</div></a></li>

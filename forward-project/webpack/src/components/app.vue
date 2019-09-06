@@ -1,7 +1,7 @@
 <template>
 	<div class="app-container">
 	<myheader></myheader>
-	<router-view></router-view>
+	<router-view ></router-view>
 	<!-- 底部内容 -->
 	<mt-tabbar v-model="selected" >
 	  <mt-tab-item  :id="item.content" v-for="item in data1" :key="item.id" :href="item.link">
@@ -49,7 +49,6 @@
 <style scoped>
 .app-container{
 	padding-bottom: 50px;
-
 }
 .mint-tabbar{
 	position: fixed;

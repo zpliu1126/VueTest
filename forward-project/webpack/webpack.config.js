@@ -10,7 +10,7 @@ module.exports={
 		filename:"bundle.js"
 	},
 	devServer:{
-		port:8081,
+		port:80,
 		host:'0.0.0.0',
 		disableHostCheck: true,
 		contentBase:path.join(__dirname,"/"),

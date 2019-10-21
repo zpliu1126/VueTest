@@ -33,7 +33,7 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon mui-icon-phone"></span>
 		                    <div class="mui-media-body">Phone</div></a></li>
-</ul>
+	</ul>
  </div>
 </template>
 <script>

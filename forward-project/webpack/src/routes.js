@@ -5,14 +5,16 @@ import home from './components/home.vue'
 import register from './components/register.vue'
 import news from "./components/news.vue"
 import blog from "./components/blog.vue"
+import login from "./components/login.vue"
 
-const router=new VueRouter({
-	routes:[{path:"",redirect:"/blog"},
-	{path:'/home',component:home,},
-	{path:'/register',component:register},
-	{path:'/home/news',component:news},
-	{path:'/blog',component:blog},
-	]
+const router = new VueRouter({
+    routes: [{ path: "/", redirect: "/home" },
+        { path: '/home', component: home, },
+        { path: '/register', component: register },
+        { path: '/home/news', component: news },
+        { path: '/blog', component: blog },
+        { path: '/login', component: login },
+    ]
 })
 
 export default router

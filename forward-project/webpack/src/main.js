@@ -45,7 +45,7 @@ Vue.use(VueResource)
 Vue.http.options.root ='http://www.zpliublog.club:8080'
 
 //app组件文件
-import appEntry from './components/app.vue'
+import appEntry from './components/blog.vue'
 //替换html模板x 
 var template=`
 <App></App>

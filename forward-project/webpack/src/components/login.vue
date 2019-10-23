@@ -5,7 +5,7 @@
         Weclome To Github
     </div>
         <div class="card-body">
-          <form action="#">
+          <form action="http://www.zpliublog.club:8080/API/" method="post">
               <div class="form-group">
                   <label for="">
                    Account
@@ -26,6 +26,9 @@
   </div>
 </template>
 <script>
+
+
+
 </script>
 <style scoped>
   #loginContainer {
@@ -52,6 +55,7 @@
     height: 40px;
     padding:10px;
     transform: border-bottom 0.5s;
+    color: grey;
   }
   form input[type="text"]:focus, input[type="password"]:focus{
     border-bottom:solid 2px blue;

@@ -5,7 +5,7 @@
         Weclome To Github
     </div>
         <div class="card-body">
-          <form action="http://www.zpliublog.club:8080/API/" method="post">
+          <form action="#" method="post">
               <div class="form-group">
                   <label for="">
                    Account
@@ -18,7 +18,7 @@
                   </label>
                     <input type="password" class="form-control" required placeholder="At least five character">
                 </div>
-                <button  class="form-control btn" type="submit" style="">login</button>
+                <button  class="form-control btn"  v-on:click="login($event)" >login</button>
           </form>
         </div>
       </div>
@@ -26,7 +26,24 @@
   </div>
 </template>
 <script>
-
+import { Toast } from 'mint-ui';
+export default{
+  data() {
+    return {
+      requsetToast:null
+    }
+  },
+  methods:{
+      login(event){
+        event.preventDefault();
+        this.requsetToast=Toast({
+			  message: '登录ing',
+			  position: 'top',
+			  duration: -1
+			});
+      }
+    },
+}
 
 
 </script>

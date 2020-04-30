@@ -16,7 +16,7 @@
     "element-ui": "^2.11.1",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mint-ui": "^2.2.13",
     "vue": "^2.6.10",
     "vue-resource": "^1.5.1",
